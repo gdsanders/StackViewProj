@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -28,16 +33,31 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="OjG-7b-ovs">
                                         <rect key="frame" x="146" y="166" width="308" height="137"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jB4-cH-waP">
-                                        <rect key="frame" x="268" y="333" width="64" height="136"/>
-                                        <state key="normal" title="Add Star!"/>
-                                        <connections>
-                                            <action selector="addStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqd-Cs-Uar"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JdL-Pc-dLg">
+                                        <rect key="frame" x="218" y="333" width="165" height="136"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jB4-cH-waP">
+                                                <rect key="frame" x="0.0" y="53" width="64" height="30"/>
+                                                <state key="normal" title="Add Star!"/>
+                                                <connections>
+                                                    <action selector="addStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqd-Cs-Uar"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clU-WS-9qG" userLabel="Remove Star!">
+                                                <rect key="frame" x="74" y="53" width="91" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="Remove Star!">
+                                                    <color key="titleColor" red="0.90196078430000004" green="0.18039215689999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="removeStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gie-ao-Bx9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lx0-gr-ZvA">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lx0-gr-ZvA">
                                 <rect key="frame" x="0.0" y="490" width="600" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="6iW-GH-wKW"/>
