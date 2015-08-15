@@ -26,5 +26,13 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-}
+    
+    @IBAction func addButton(sender: AnyObject) {
+        let starImgVw:UIImageView = UIImageView(image: UIImage(named: "star"))
+        self.horizontalStackView.addArrangedSubview(starImgVw)
+        UIView.animateWithDuration(0.25, animations: {
+            self.horizontalStackView.layoutIfNeeded()
+        })
+    }
 
+}
